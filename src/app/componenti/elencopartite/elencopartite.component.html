@@ -1,0 +1,5 @@
+<div *ngFor="let elencoPartiteStampabili of elencoPartiteArray">
+  <div *ngFor="let partita of elencoPartiteStampabili">
+    <app-singolapartita [date]="partita.date" [matches]="partita.matches"></app-singolapartita>
+  </div>
+</div>
