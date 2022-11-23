@@ -2,12 +2,12 @@ import {Component,Input,OnInit} from "@angular/core";
 import {match} from "src/app/interfacce/match";
 
 @Component({
-  selector: "app-singolapartita",
-  templateUrl: "./singolapartita.component.html",
-  styleUrls: ["./singolapartita.component.css"]
+  selector: "app-giornatacalendario",
+  templateUrl: "./giornatacalendario.component.html",
+  styleUrls: ["./giornatacalendario.component.css"]
 })
 
-export class SingolapartitaComponent implements OnInit {
+export class GiornatacalendarioComponent implements OnInit {
   @Input() date:string = "";
   @Input() matches:match[] = [];
 

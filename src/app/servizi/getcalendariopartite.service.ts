@@ -6,10 +6,10 @@ import {Observable} from "rxjs";
   providedIn:"root"
 })
 
-export class GetelencopartiteService {
+export class GetcalendariopartiteService {
   constructor(private richiesteserver:RichiesteserverService){}
 
-  public getElencoPartite():Observable<Object>{
+  public getCalendarioPartite():Observable<Object>{
     return this.richiesteserver.effettuaRichiesta("assets/matches.json");
   }
 }
