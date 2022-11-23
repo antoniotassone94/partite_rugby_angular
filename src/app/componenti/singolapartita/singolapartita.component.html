@@ -1,28 +1,26 @@
 <div class="date">{{date | uppercase}}</div>
 <div class="match" *ngFor="let match of matches">
   <div class="type">{{match.type | uppercase}}</div>
-  <div class="datisquadre" *ngFor="let team of match.teams;index as i">
-    <div *ngIf="i == 0" class="squadrasinistra">
-      <div class="bordocoloratosinistro" [ngStyle]="{'background-color':team.color}"></div>
-      <div class="sfondosinistro" [ngStyle]="{'background-image':team.themeImage}">
-        <div class="logosinistro"><img [src]="team.logo"></div>
-        <div class="conferencesinistra">{{team.conference | uppercase}}</div>
-        <div class="positionsinistra">{{team.position}}</div>
-        <div class="namesinistro">{{team.name | uppercase}}</div>
-        <div class="scoresinistro">{{team.score}}</div>
+    <div class="squadrasinistra">
+      <div class="bordocoloratosinistro" [ngStyle]="{'background-color':match.teams[0].color}"></div>
+      <div class="sfondosinistro" [ngStyle]="{'background-image':match.teams[0].themeImage}">
+        <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
+        <div class="conferencesinistra">{{match.teams[0].conference | uppercase}}</div>
+        <div class="positionsinistra">{{match.teams[0].position}}</div>
+        <div class="namesinistro">{{match.teams[0].name | uppercase}}</div>
+        <div class="scoresinistro">{{match.teams[0].score}}</div>
       </div>
     </div>
-    <div *ngIf="i == 1" class="squadradestra">
-      <div class="bordocoloratodestro" [ngStyle]="{'background-color':team.color}"></div>
-      <div class="sfondodestro" [ngStyle]="{'background-image':team.themeImage}">
-        <div class="scoredestro">{{team.score}}</div>
-        <div class="namedestro">{{team.name | uppercase}}</div>
-        <div class="logodestro"><img [src]="team.logo"></div>
-        <div class="conferencedestra">{{team.conference | uppercase}}</div>
-        <div class="positiondestra">{{team.position}}</div>
+    <div class="squadradestra">
+      <div class="bordocoloratodestro" [ngStyle]="{'background-color':match.teams[1].color}"></div>
+      <div class="sfondodestro" [ngStyle]="{'background-image':match.teams[1].themeImage}">
+        <div class="scoredestro">{{match.teams[1].score}}</div>
+        <div class="namedestro">{{match.teams[1].name | uppercase}}</div>
+        <div class="logodestro"><img [src]="match.teams[1].logo"></div>
+        <div class="conferencedestra">{{match.teams[1].conference | uppercase}}</div>
+        <div class="positiondestra">{{match.teams[1].position}}</div>
       </div>
     </div>
-  </div>
   <div class="place">{{match.place | uppercase}}</div>
   <div class="logotelevisione"><img src="assets/images/united-rugby-copy.png"></div>
 </div>
