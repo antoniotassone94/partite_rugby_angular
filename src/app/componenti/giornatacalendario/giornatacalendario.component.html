@@ -1,26 +1,22 @@
 <div class="date">{{date | uppercase}}</div>
 <div class="match" *ngFor="let match of matches">
   <div class="type">{{match.type | uppercase}}</div>
-    <div class="squadrasinistra">
-      <div class="bordocoloratosinistro" [ngStyle]="{'background-color':match.teams[0].color}"></div>
-      <div class="sfondosinistro" [ngStyle]="{'background-image':match.teams[0].themeImage}">
-        <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
-        <div class="conferencesinistra">{{match.teams[0].conference | uppercase}}</div>
-        <div class="positionsinistra">{{match.teams[0].position}}</div>
-        <div class="namesinistro">{{match.teams[0].name | uppercase}}</div>
-        <div class="scoresinistro">{{match.teams[0].score}}</div>
-      </div>
+  <div class="datisquadre">
+    <div class="sfondosinistro" [ngStyle]="{'background-image':match.teams[0].themeImage,'border-left-color':match.teams[0].color}">
+      <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
+      <div class="conferencesinistra">{{match.teams[0].conference | uppercase}}</div>
+      <div class="positionsinistra">{{match.teams[0].position}}</div>
+      <div class="namesinistro">{{match.teams[0].name | uppercase}}</div>
+      <div class="scoresinistro">{{match.teams[0].score}}</div>
     </div>
-    <div class="squadradestra">
-      <div class="bordocoloratodestro" [ngStyle]="{'background-color':match.teams[1].color}"></div>
-      <div class="sfondodestro" [ngStyle]="{'background-image':match.teams[1].themeImage}">
-        <div class="scoredestro">{{match.teams[1].score}}</div>
-        <div class="namedestro">{{match.teams[1].name | uppercase}}</div>
-        <div class="logodestro"><img [src]="match.teams[1].logo"></div>
-        <div class="conferencedestra">{{match.teams[1].conference | uppercase}}</div>
-        <div class="positiondestra">{{match.teams[1].position}}</div>
-      </div>
+    <div class="sfondodestro" [ngStyle]="{'background-image':match.teams[1].themeImage,'border-right-color':match.teams[1].color}">
+      <div class="scoredestro">{{match.teams[1].score}}</div>
+      <div class="namedestro">{{match.teams[1].name | uppercase}}</div>
+      <div class="logodestro"><img [src]="match.teams[1].logo"></div>
+      <div class="conferencedestra">{{match.teams[1].conference | uppercase}}</div>
+      <div class="positiondestra">{{match.teams[1].position}}</div>
     </div>
+  </div>
   <div class="place">{{match.place | uppercase}}</div>
   <div class="logotelevisione"><img src="assets/images/united-rugby-copy.png"></div>
 </div>
