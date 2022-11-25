@@ -95,10 +95,20 @@
   padding-bottom:0%;
   margin-left:0%;
   margin-right:0%;
-  margin-top:0%;
-  margin-bottom:0%;
   border:0px none white;
   background-color:transparent;
+}
+
+.sfondosinistro,
+.sfondodestro,
+.datisinistra,
+.datidestra,
+.squadrasinistra,
+.squadrasinistra,
+.conferencepositionsinistra,
+.conferencepositiondestra{
+  margin-top:0%;
+  margin-bottom:0%;
 }
 
 .sfondosinistro,.sfondodestro{
@@ -124,6 +134,8 @@
 .dati1sinistra,
 .dati1destra{
   flex-direction:column;
+  margin-top:auto;
+  margin-bottom:auto;
 }
 
 .squadrasinistra{
