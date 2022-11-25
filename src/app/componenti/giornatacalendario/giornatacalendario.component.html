@@ -2,19 +2,33 @@
 <div class="match" *ngFor="let match of matches">
   <div class="type">{{match.type | uppercase}}</div>
   <div class="datisquadre">
-    <div class="sfondosinistro" [ngStyle]="{'background-image':match.teams[0].themeImage,'border-left-color':match.teams[0].color}">
-      <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
-      <div class="conferencesinistra">{{match.teams[0].conference | uppercase}}</div>
-      <div class="positionsinistra">{{match.teams[0].position}}</div>
-      <div class="namesinistro">{{match.teams[0].name | uppercase}}</div>
-      <div class="scoresinistro">{{match.teams[0].score}}</div>
+    <div class="squadrasinistra" [ngStyle]="{'border-left-color':match.teams[0].color}">
+      <div class="sfondosinistro"><img [src]="match.teams[0].themeImage"></div>
+      <div class="datisinistra">
+        <div class="dati1sinistra">
+          <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
+          <div class="conferencepositionsinistra">
+            <div class="conferencesinistra">{{match.teams[0].conference | uppercase}}</div>
+            <div class="positionsinistra">{{match.teams[0].position}}</div>
+          </div>
+        </div>
+        <div class="namesinistro">{{match.teams[0].name | uppercase}}</div>
+        <div class="scoresinistro">{{match.teams[0].score}}</div>
+      </div>
     </div>
-    <div class="sfondodestro" [ngStyle]="{'background-image':match.teams[1].themeImage,'border-right-color':match.teams[1].color}">
-      <div class="scoredestro">{{match.teams[1].score}}</div>
-      <div class="namedestro">{{match.teams[1].name | uppercase}}</div>
-      <div class="logodestro"><img [src]="match.teams[1].logo"></div>
-      <div class="conferencedestra">{{match.teams[1].conference | uppercase}}</div>
-      <div class="positiondestra">{{match.teams[1].position}}</div>
+    <div class="squadradestra" [ngStyle]="{'border-right-color':match.teams[1].color}">
+      <div class="sfondodestro"><img [src]="match.teams[1].themeImage"></div>
+      <div class="datidestra">
+        <div class="scoredestro">{{match.teams[1].score}}</div>
+        <div class="namedestro">{{match.teams[1].name | uppercase}}</div>
+        <div class="dati1destra">
+          <div class="logodestro"><img [src]="match.teams[1].logo"></div>
+          <div class="conferencepositiondestra">
+            <div class="conferencedestra">{{match.teams[1].conference | uppercase}}</div>
+            <div class="positiondestra">{{match.teams[1].position}}</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="place">{{match.place | uppercase}}</div>

@@ -77,91 +77,141 @@
   display:flex;
 }
 
-.sfondosinistro,.sfondodestro{
+.sfondosinistro,
+.sfondodestro,
+.datisinistra,
+.datidestra,
+.squadrasinistra,
+.squadrasinistra,
+.conferencepositionsinistra,
+.conferencepositiondestra,
+.dati1sinistra,
+.dati1destra{
   width:max-content;
   height:100%;
   padding-left:0%;
   padding-right:0%;
   padding-top:0%;
   padding-bottom:0%;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:0%;
+  margin-right:0%;
   margin-top:0%;
   margin-bottom:0%;
   border:0px none white;
   background-color:transparent;
 }
 
-.sfondosinistro{
+.sfondosinistro,.sfondodestro{
   background-repeat:no-repeat;
+  opacity:20%;
+  z-index:-1;
+}
+
+.datisinistra,.datidestra{
+  z-index:0;
+  display:flex;
+}
+
+.squadrasinistra,
+.squadradestra,
+.conferencepositionsinistra,
+.conferencepositiondestra,
+.dati1sinistra,
+.dati1destra{
+  display:flex;
+}
+
+.dati1sinistra,
+.dati1destra{
+  flex-direction:column;
+}
+
+.squadrasinistra{
   border-left-width:30px;
   border-left-style:solid;
   border-bottom-left-radius:40px;
 }
 
-.sfondodestro{
-  background-repeat:no-repeat;
+.squadradestra{
   border-right-width:30px;
   border-right-style:solid;
   border-bottom-right-radius:40px;
 }
 
-/*
-.logosinistro{
-  opacity:100%;
-}
-*/
-
-/*
-.conferencesinistra{
-  background-color: white;
-}
-*/
-
-/*
+.conferencepositionsinistra,
+.conferencepositiondestra,
+.positiondestra,
 .positionsinistra{
-  background-color: white;
+  text-align:center;
+  font-family:Oswald,Oswald;
+  color:white;
+  font-weight:bold;
+  width:max-content;
+  padding-left:0%;
+  padding-right:0%;
+  padding-top:0%;
+  padding-bottom:0%;
+  margin-left:0%;
+  margin-right:0%;
+  margin-top:0%;
+  margin-bottom:0%;
+  border:0px none white;
 }
-*/
 
-/*
-.namesinistro{
-  background-color: white;
+.conferencepositionsinistra,
+.conferencepositiondestra{
+  font-size:10pt;
 }
-*/
 
-/*
-.scoresinistro{
-  background-color: white;
-}
-*/
-
-/*
-.scoredestro{
-  background-color: white;
-}
-*/
-
-/*
-.namedestro{
-  background-color: white;
-}
-*/
-
-/*
-.logodestro{
-  background-color: white;
-}
-*/
-
-/*
-.conferencedestra{
-  background-color: white;
-}
-*/
-
-/*
+.positionsinistra,
 .positiondestra{
-  background-color: white;
+  font-size:14pt;
 }
-*/
+
+.namedestro,
+.namesinistro,
+.scoredestro,
+.scoresinistro{
+  text-align:center;
+  font-family:Oswald,Oswald;
+  font-weight:bold;
+  font-size:24pt;
+  width:max-content;
+  margin-left:0%;
+  margin-right:0%;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+
+.namedestro,
+.namesinistro{
+  padding-left:0%;
+  padding-right:0%;
+  padding-top:0%;
+  padding-bottom:0%;
+  color:white;
+  border:0px none white;
+}
+
+.scoredestro,
+.scoresinistro{
+  padding-left:9%;
+  padding-right:9%;
+  padding-top:9%;
+  padding-bottom:9%;
+  background-color:white;
+  color:black;
+  border:2px solid white;
+}
+
+.scoresinistro{
+  border-bottom-left-radius:20%;
+}
+
+.scoredestro{
+  border-bottom-right-radius:20%;
+}
+
+.logosinistro img,.logodestro img{
+  width:80px;
+}
