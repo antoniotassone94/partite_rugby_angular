@@ -2,8 +2,7 @@
 <div class="match" *ngFor="let match of matches">
   <div class="type">{{match.type | uppercase}}</div>
   <div class="datisquadre">
-    <div class="squadrasinistra" [ngStyle]="{'border-left-color':match.teams[0].color}">
-      <div class="sfondosinistro"><img [src]="match.teams[0].themeImage"></div>
+    <div class="squadrasinistra" [ngStyle]="{'border-left-color':match.teams[0].color,'background-image':match.teams[0].themeImage}">
       <div class="datisinistra">
         <div class="dati1sinistra">
           <div class="logosinistro"><img [src]="match.teams[0].logo"></div>
@@ -16,8 +15,7 @@
         <div class="scoresinistro">{{match.teams[0].score}}</div>
       </div>
     </div>
-    <div class="squadradestra" [ngStyle]="{'border-right-color':match.teams[1].color}">
-      <div class="sfondodestro"><img [src]="match.teams[1].themeImage"></div>
+    <div class="squadradestra" [ngStyle]="{'border-right-color':match.teams[1].color,'background-image':match.teams[1].themeImage}">
       <div class="datidestra">
         <div class="scoredestro">{{match.teams[1].score}}</div>
         <div class="namedestro">{{match.teams[1].name | uppercase}}</div>

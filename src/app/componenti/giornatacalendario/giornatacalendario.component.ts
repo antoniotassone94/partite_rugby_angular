@@ -20,7 +20,7 @@ export class GiornatacalendarioComponent implements OnInit {
         let team = match.teams[j];
         team.color = "rgb(" + team.color + ")";
         team.logo = "assets/images/" + team.logo;
-        team.themeImage = "assets/images/" + team.themeImage + ".png";
+        team.themeImage = "url('assets/images/" + team.themeImage + ".png')";
         team.conference = "(" + team.conference + ")";
       }
     }
