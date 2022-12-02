@@ -209,10 +209,12 @@
 
 .scoresinistro{
   border-bottom-left-radius:20%;
+  margin-right:15px;
 }
 
 .scoredestro{
   border-bottom-right-radius:20%;
+  margin-left:15px;
 }
 
 .logosinistro img,.logodestro img{
