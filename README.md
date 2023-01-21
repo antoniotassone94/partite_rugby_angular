@@ -1,7 +1,7 @@
 # Gestione del calendario delle partite di rugby
 ## Descrizione generale
 Questa applicazione serve a controllare il calendario delle partite di rugby del campionato americano
-nella stagione 2022/2023. Per sviluppare questa applicazione è stato utilizzato il linguaggio HTML per i
+nella stagione 2022/2023. Per sviluppare questa applicazione è stato utilizzato il linguaggio HTML per iiiiiiiii
 template, il CSS per la grafica e il framework typescript Angular per gestire la logica e le parti dinamiche.
 
 ## Utilizzo dell'applicazione
