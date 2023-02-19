@@ -23,7 +23,7 @@
 }
 
 .match:hover .logosinistro,.match:hover .logodestro,.match:hover .namesinistro,.match:hover .namedestro{
-  transform:scale(1.1);
+  transform:scale(1.05);
 }
 
 .type,.place{
@@ -132,13 +132,13 @@
 .squadrasinistra{
   border-left-width:30px;
   border-left-style:solid;
-  border-bottom-left-radius:40px;
+  border-bottom-left-radius:25px;
 }
 
 .squadradestra{
   border-right-width:30px;
   border-right-style:solid;
-  border-bottom-right-radius:40px;
+  border-bottom-right-radius:25px;
 }
 
 .conferencepositionsinistra,
@@ -208,12 +208,10 @@
 }
 
 .scoresinistro{
-  border-bottom-left-radius:20%;
   margin-right:15px;
 }
 
 .scoredestro{
-  border-bottom-right-radius:20%;
   margin-left:15px;
 }
 
