@@ -1,11 +1,11 @@
 import {Component,OnInit} from "@angular/core";
-import {calendarMatches} from "src/app/interfacce/calendarMatches";
-import {GetcalendariopartiteService} from "src/app/servizi/getcalendariopartite.service";
+import {calendarMatches} from "../../interfacce/calendarMatches";
+import {GetcalendariopartiteService} from "../../servizi/getcalendariopartite.service";
 
 @Component({
   selector:"app-calendariopartite",
   templateUrl:"./calendariopartite.component.html",
-  styleUrls: ["./calendariopartite.component.css"]
+  styleUrl: "./calendariopartite.component.css"
 })
 
 export class CalendariopartiteComponent implements OnInit {

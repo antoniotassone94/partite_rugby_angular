@@ -1,10 +1,10 @@
 import {Component,Input,OnInit} from "@angular/core";
-import {match} from "src/app/interfacce/match";
+import {match} from "../../interfacce/match";
 
 @Component({
   selector: "app-giornatacalendario",
   templateUrl: "./giornatacalendario.component.html",
-  styleUrls: ["./giornatacalendario.component.css"]
+  styleUrl: "./giornatacalendario.component.css"
 })
 
 export class GiornatacalendarioComponent implements OnInit {

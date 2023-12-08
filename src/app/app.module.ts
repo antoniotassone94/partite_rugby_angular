@@ -24,4 +24,5 @@ import {GiornatacalendarioComponent} from "./componenti/giornatacalendario/giorn
   providers: [],
   bootstrap: [HomepageComponent]
 })
+
 export class AppModule{}
