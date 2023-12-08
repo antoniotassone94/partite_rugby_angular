@@ -1,5 +1,3 @@
-<div *ngFor="let daticalendario of calendariopartitearray">
-  <div *ngFor="let giornatacalendario of daticalendario">
-    <app-giornatacalendario [date]="giornatacalendario.date" [matches]="giornatacalendario.matches"></app-giornatacalendario>
-  </div>
+<div *ngFor="let datigiornata of calendariopartite">
+  <app-giornatacalendario [date]="datigiornata.date" [matches]="datigiornata.matches"></app-giornatacalendario>
 </div>

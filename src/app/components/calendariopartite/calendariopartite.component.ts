@@ -1,4 +1,4 @@
-import {Component,OnInit} from "@angular/core";
+import {Component,OnInit,inject} from "@angular/core";
 import {CalendarMatchesModel} from "../../models/calendarmatches.model";
 import {GetCalendarioPartiteService} from "../../services/getcalendariopartite.service";
 
@@ -9,17 +9,23 @@ import {GetCalendarioPartiteService} from "../../services/getcalendariopartite.s
 })
 
 export class CalendarioPartiteComponent implements OnInit{
-  public calendariopartite = {};
-  public calendariopartitearray:CalendarMatchesModel[][] = [];
+  private _calendariopartite:CalendarMatchesModel[];
+  private getcalendarioservice:GetCalendarioPartiteService;
 
-  constructor(private calendariopartiteServizio:GetCalendarioPartiteService){}
+  constructor(){
+    this._calendariopartite = [];
+    this.getcalendarioservice = inject(GetCalendarioPartiteService);
+  }
+
+  public get calendariopartite():CalendarMatchesModel[]{
+    return this._calendariopartite;
+  }
 
   public ngOnInit():void{
-    this.calendariopartiteServizio.getCalendarioPartite().subscribe(
-      (dati:any) => {
-        this.calendariopartite = dati;
-        this.calendariopartitearray = Object.values<CalendarMatchesModel[]>(this.calendariopartite);
+    this.getcalendarioservice.getCalendarioPartite().subscribe({
+      next: (dati:any) => {
+        this._calendariopartite = Object.values<CalendarMatchesModel[]>(dati)[0];
       }
-    );
+    });
   }
 }
