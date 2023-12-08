@@ -6,10 +6,10 @@ import {Observable} from "rxjs";
   providedIn:"root"
 })
 
-export class RichiesteserverService {
+export class HttpRequestService{
   constructor(private http:HttpClient){}
 
-  public effettuaRichiesta(url:string):Observable<Object>{
+  public httpGetRequest(url:string):Observable<Object>{
     return this.http.get<Object>(url);
   }
 }

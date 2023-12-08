@@ -3,17 +3,21 @@ import {BrowserModule} from "@angular/platform-browser";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {HomepageComponent} from "./componenti/homepage/homepage.component";
-import {Errore404Component} from "./componenti/errore404/errore404.component";
-import {CalendariopartiteComponent} from "./componenti/calendariopartite/calendariopartite.component";
-import {GiornatacalendarioComponent} from "./componenti/giornatacalendario/giornatacalendario.component";
+
+import {MainComponent} from "./components/main/main.component";
+import {Errore404Component} from "./components/errore404/errore404.component";
+import {CalendarioPartiteComponent} from "./components/calendariopartite/calendariopartite.component";
+import {GiornataCalendarioComponent} from "./components/giornatacalendario/giornatacalendario.component";
+
+import {GetCalendarioPartiteService} from "./services/getcalendariopartite.service";
+import {HttpRequestService} from "./services/httprequest.service";
 
 @NgModule({
   declarations: [
-    HomepageComponent,
+    MainComponent,
     Errore404Component,
-    CalendariopartiteComponent,
-    GiornatacalendarioComponent
+    CalendarioPartiteComponent,
+    GiornataCalendarioComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +25,11 @@ import {GiornatacalendarioComponent} from "./componenti/giornatacalendario/giorn
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [HomepageComponent]
+  providers: [
+    GetCalendarioPartiteService,
+    HttpRequestService
+  ],
+  bootstrap: [MainComponent]
 })
 
 export class AppModule{}

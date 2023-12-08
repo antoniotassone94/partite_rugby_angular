@@ -1,5 +1,5 @@
 import {Component,Input,OnInit} from "@angular/core";
-import {match} from "../../interfacce/match";
+import {MatchModel} from "../../models/match.model";
 
 @Component({
   selector: "app-giornatacalendario",
@@ -7,13 +7,13 @@ import {match} from "../../interfacce/match";
   styleUrl: "./giornatacalendario.component.css"
 })
 
-export class GiornatacalendarioComponent implements OnInit {
+export class GiornataCalendarioComponent implements OnInit{
   @Input() date:string = "";
-  @Input() matches:match[] = [];
+  @Input() matches:MatchModel[] = [];
 
   constructor(){}
 
-  ngOnInit():void{
+  public ngOnInit():void{
     for (let i:number = 0; i < this.matches.length; i++) {
       let match = this.matches[i];
       for (let j:number = 0; j < match.teams.length; j++) {
